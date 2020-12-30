@@ -33,7 +33,7 @@ $(function () {
     e.preventDefault()
     $.ajax({
       method: 'POST',
-      url: 'http://ajax.frontend.itheima.net/api/reguser',
+      url: '/api/reguser',
       data: {
         username: $('#form_reg [name=username]').val(),
         password: $('#form_reg [name=password]').val()
@@ -55,7 +55,7 @@ $(function () {
     e.preventDefault()
     $.ajax({
       method: 'POST',
-      url: 'http://ajax.frontend.itheima.net/api/login',
+      url: '/api/login',
       data: $(this).serialize(),
       success: (res) => {
         if (res.status !== 0) return layer.msg(res.message)
